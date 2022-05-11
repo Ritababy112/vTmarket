@@ -1,0 +1,365 @@
+.press {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+body, div,  ul, ol, li, h1, h2, h3, h4, h5, h6,  p,  td {
+    margin: 0;
+    padding: 0;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div {
+    display: block;
+}
+body {
+    background: #fff;
+    font-size: 16px;
+    color: #000d28;
+    font-weight: normal;
+    font-family: "Oblivian-UltraLight";
+}
+body {
+    font: 13px/1.231 arial,helvetica,clean,sans-serif;
+}
+.press1 {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/image/fist.jpg);
+    margin-bottom: 110px;
+    height: 250px;
+}
+.press1 >  div {
+    max-width: 1216px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+.press1 > div > div  {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+}
+.press1 > div > div > div {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+}
+.press1 > div > div > div >  h1 {
+    color: #000d28;
+    margin: 0px;
+}
+h1 {
+    font-size: 78px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    font-family: "Oblivian-Medium";
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+h1 {
+    display: block;
+    font-size: 100px;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.press2 > div{
+        max-width: 1216px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0 auto;
+}
+.press3 {
+    position: relative;
+    display: flex;
+    margin-bottom: 36px;
+    width: calc(100% - 36px);
+    min-height: 260px;
+    background: #f9f9f9;
+
+}
+.press3  > div:first-child{
+    display: flex;
+    background: #0051ff;
+    color: #fff;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 230px;
+}
+.press3  > div:nth-child(2){
+    padding: 40px 100px 40px 40px;
+    width: calc(100% - 196px);
+    color: #000d28;
+}
+.press3 > div:nth-child(3){
+    position: absolute;
+    top: 50%;
+    right: -36px;
+    display: flex;
+    margin-top: -36px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 9px 35px 0 rgb(0 0 0 / 13%);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    color: #000d28;
+    text-decoration: none;
+    outline-style: none;
+}
+.post_wrapper .press3 .press3  > div:nth-child(2) .post_list_time_day {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 96px;
+    font-family: VisbyCF-Bold;
+}
+.post_list_time_day {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 96px;
+    font-family: VisbyCF-Bold;
+}
+.post_wrapper .press3  .press3  > div:nth-child(2) .post_list_time_year {
+    display: block;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    font-size: 24px;
+    font-family: Oblivian-SemiBold
+}
+.post_list_time_year {
+    display: block;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    font-size: 24px;
+    font-family: Oblivian-SemiBold
+}
+.press3  > div:nth-child(2) > a{
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-family: Oblivian-SemiBold;
+}
+a {
+    color: #000d28;
+    text-decoration: none;
+    outline-style: none;
+}
+.press3  > div:nth-child(2) > p{
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 0;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    font-family: Oblivian-UltraLight;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+p {
+    line-height: 1.7;
+    margin: 0px 0px 23px;
+}
+.my_div6{
+    margin-bottom: 0 !important;
+    clear: both;
+    margin: 16px auto;
+}
+.my_div7{
+    line-height: 32px;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    outline: 0;
+    display: inline;
+}
+.mydi{
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: Oblivian-SemiBold;
+    margin-bottom: 0 !important;
+    font-size: 32px;
+    cursor: pointer;
+    border: 0;
+    box-shadow: none;
+    padding: 0 4px;
+    vertical-align: middle;
+}
+.mydi > span {
+    height: 32px;
+    line-height: 32px;
+    width: 32px;
+}
+.mydi >span {
+    border-radius: 4px;
+    display: inline-block;
+    opacity: 1;
+}
+.a2a_svg {
+    background-repeat: repeat;
+}
+.mydi> span {
+    display: inline-block;
+    float: none;
+}
+.a2a_svg svg {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: none;
+    display: block;
+    left: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    top: 0;
+    width: auto;
+    height: auto;
+}
+.post_list_button {
+    position: absolute;
+    top: 50%;
+    right: -36px;
+    display: flex;
+    margin-top: -36px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #fff;
+    -webkit-box-shadow: 0 9px 35px 0 rgb(0 0 0 / 13%);
+    -moz-box-shadow: 0 9px 35px 0 rgba(0,0,0,.13);
+    box-shadow: 0 9px 35px 0 rgb(0 0 0 / 13%);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.img {
+    border: 0;
+}
+.post_wrapper .post_list_turn_item {
+    text-align: right;
+}
+.post_wrapper .post_list_turn_item .wp-pagenavi {
+    display: inline-block;
+    padding: 0 0 40px;
+    font-size: 16px;
+}
+.post_wrapper .post_list_turn_item .wp-pagenavi a, .wp-pagenavi span {
+    display: inline-block;
+    margin: 0 5px;
+    width: 20px;
+    border-bottom: 3px solid transparent;
+    text-align: center;
+    cursor: pointer;
+}
+.i1{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+}
+.post_wrapper .post_list_turn_item .wp-pagenavi a, .wp-pagenavi span {
+    display: inline-block;
+    margin: 0 5px;
+    width: 20px;
+    border-bottom: 3px solid transparent;
+    text-align: center;
+    cursor: pointer;
+}
+.post_wrapper .post_list_turn_item .wp-pagenavi span.current {
+    border-bottom: 3px solid #00f0ff;
+}
+.post_wrapper .post_list_turn_item .wp-pagenavi a, .wp-pagenavi span {
+    display: inline-block;
+    margin: 0 5px;
+    width: 20px;
+    border-bottom: 3px solid transparent;
+    text-align: center;
+    cursor: pointer;
+}
+@media (max-width: 980px){
+.press1  > div > div > div > h1 {
+    font-size: 48px;
+}
+.press1  > div{
+    height: 248px;
+}
+}
+@media (max-width: 768px){
+.press3 {
+    display: block;
+    width: calc(100% - 20px);
+}
+.press3 > div:first-child{
+    padding: 14px 24px 20px 24px;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.div12{
+    text-align: center;
+}
+.press3 > div:nth-child(2){
+    padding: 24px;
+    width: 100%;
+}
+.press3 > div:nth-child(3){
+    top: 36px;
+    right: -20px;
+    margin-top: 0;
+    width: 40px;
+    height: 40px;
+}
+}
+@media (max-width: 768px){
+.post_wrapper .press3 .press3  > div:nth-child(2) .post_list_time_day {
+    margin-bottom: 0;
+    font-size: 64px;
+}
+}
+@media (max-width: 768px){
+.post_wrapper .press3 .press3  > div:nth-child(2) .post_list_time_year {
+    display: flex;
+    margin-bottom: 0;
+    margin-left: 15px;
+    padding-top: 21px;
+    font-size: 20px;
+    align-items: center;
+}
+.press3  > div:nth-child(2) > a{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.press3  > div:nth-child(2) > p{
+    display: inline-block;
+    text-overflow: clip;
+    font-size: 16px;
+}
+.post_wrapper .post_list_turn_item {
+    text-align: center;
+}
+.my{
+    text-align: center;
+}
+}

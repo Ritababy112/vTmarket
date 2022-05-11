@@ -1,0 +1,212 @@
+if(GetUrl("ls")!="")
+{
+	setCookie("ls",GetUrl("ls"),90);
+}
+
+if(GetUrl("cpaid")!="")
+{
+	setCookie("cpaid",GetUrl("cpaid"),1);
+}
+if(GetUrl("affid")!="")
+{
+	setCookie("affid",GetUrl("affid"),1);
+}
+if(GetUrl("cxd")!="")
+{
+	setCookie("cxd",GetUrl("cxd"),1);
+	var cpaids = GetUrl("cxd");
+	var cpaids1 = cpaids.split("_");
+	setCookie("cpaid",cpaids1[0],1)
+
+}
+var g_c="";
+if(GetUrl("c")!="")
+{
+	setCookie("c",GetUrl("c"),90);
+}
+
+if(getCookie("c")&&getCookie("c")!=""&&getCookie("c")!=null&&getCookie("c")!="null")
+{
+	var g_c=getCookie("c");
+}
+
+// 时间戳随机数 （用于ip跳转）
+function Data()
+{
+	var date = new Date();
+	var year = date.getFullYear();
+	var month = date.getMonth() + 1;
+	var strDate = date.getDate();
+	if (month >= 1 && month <= 9) {
+		month = "0" + month;
+	}
+	if (strDate >= 0 && strDate <= 9) {
+		strDate = "0" + strDate;
+	}
+	var newRandom = "";
+	for(var i=0;i<5;i++)
+	{
+		newRandom += Math.floor(Math.random()*9 + 1).toString();
+	}
+	var currentdate =  year + month + strDate + newRandom;
+	return currentdate;
+}
+
+
+function getPar(par) {
+	//获取当前URL
+	var local_url = document.location.href;
+	//获取要取得的get参数位置
+	var get = local_url.indexOf(par + "=");
+	if (get == -1) {
+		return false;
+	}
+	//截取字符串
+	var get_par = local_url.slice(par.length + get + 1);
+	//判断截取后的字符串是否还有其他get参数
+	var nextPar = get_par.indexOf("&");
+	if (nextPar != -1) {
+		get_par = get_par.slice(0, nextPar);
+	}
+	return get_par;
+}
+
+function setCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else expires = "";
+	document.cookie = name+"="+value+expires+";path=/";
+}
+function getCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return "";
+}
+
+function GetUrl(sProp)
+{
+	var re = new RegExp("[&,?]"+sProp + "=([^\\&]*)", "i");
+	var a = re.exec(document.location.search);
+	if (a == null)
+	return "";
+	return a[1];
+}
+
+jQuery(document).ready(function ($) {
+
+
+	var cncom=$(".language_box .language_box_item a").eq(0).attr('href');
+	var escom=$(".language_box .language_box_item a").eq(1).attr('href');
+	var thcom=$(".language_box .language_box_item a").eq(2).attr('href');
+    var mycom=$(".language_box .language_box_item a").eq(3).attr('href');
+    
+    $("[tabindex]").attr("tabindex",2);
+
+	var locHref = document.location.pathname;
+	var g_wid="VT";
+	if(locHref.indexOf('/fr/') != -1){
+		g_wid="VT_FR"
+	}else if(locHref.indexOf('/es/') != -1){
+		g_wid="VT_ES"
+	}else if(locHref.indexOf('/it/') != -1){
+		g_wid="VT_IT"
+	}else if(locHref.indexOf('/de/') != -1){
+		g_wid="VT_DE"
+	}else if(locHref.indexOf('/pt/') != -1){
+		g_wid="VT_PT"
+	}else if(locHref.indexOf('/my/') != -1){
+		g_wid="VT_MY"
+	}else if(locHref.indexOf('/ar/') != -1){
+		g_wid="VT_AR"
+	}else if(locHref.indexOf('/th/') != -1){
+		g_wid="VT_TH"
+	}else if(locHref.indexOf('/vn/') != -1){
+		g_wid="VT_VN"
+	}else if(locHref.indexOf('/tr/') != -1){
+		g_wid="VT_TR"
+	}else if(locHref.indexOf('/ph/') != -1){
+		g_wid="VT_PH"
+	}
+
+    
+    var g_affid="",g_cpaid="",g_ls="",g_cxd="",g_binary="0",g_fullname="",g_country="",g_phone="", g_email="",g_account_type='';
+    
+	if(getCookie("cpaid")&&getCookie("cpaid")!=""&&getCookie("cpaid")!=null&&getCookie("cpaid")!="null")
+    {
+		var g_cpaid=getCookie("cpaid");
+
+
+	}
+	if(GetUrl("cpaid")!="")
+	{
+		var g_cpaid=GetUrl("cpaid");
+
+	}
+	if(getCookie("affid")&&getCookie("affid")!=""&&getCookie("affid")!=null&&getCookie("affid")!="null")
+	{
+		var g_affid=getCookie("affid");
+
+		$(".language_box .language_box_item a").eq(0).attr('href',cncom+"?affid="+g_affid);
+		$(".language_box .language_box_item a").eq(1).attr('href',escom+"?affid="+g_affid);
+		$(".language_box .language_box_item a").eq(2).attr('href',thcom+"?affid="+g_affid);
+		$(".language_box .language_box_item a").eq(3).attr('href',mycom+"?affid="+g_affid);
+	}
+	if(GetUrl("affid")!="")
+	{
+		var g_affid=GetUrl("affid");
+
+		$(".language_box .language_box_item a").eq(0).attr('href',cncom+"?affid="+g_affid);
+		$(".language_box .language_box_item a").eq(1).attr('href',escom+"?affid="+g_affid);
+		$(".language_box .language_box_item a").eq(2).attr('href',thcom+"?affid="+g_affid);
+		$(".language_box .language_box_item a").eq(3).attr('href',mycom+"?affid="+g_affid);
+	}
+	if(getCookie("cxd")&&getCookie("cxd")!=""&&getCookie("cxd")!=null&&getCookie("cxd")!="null")
+	{
+		var g_cxd=getCookie("cxd");
+
+		$(".language_box .language_box_item a").eq(0).attr('href',cncom+"?cxd="+g_cxd);
+		$(".language_box .language_box_item a").eq(1).attr('href',escom+"?cxd="+g_cxd);
+		$(".language_box .language_box_item a").eq(2).attr('href',thcom+"?cxd="+g_cxd);
+		$(".language_box .language_box_item a").eq(3).attr('href',mycom+"?cxd="+g_cxd);
+	}
+	if(GetUrl("cxd")!="")
+	{
+		var g_cxd=GetUrl("cxd");
+
+		$(".language_box .language_box_item a").eq(0).attr('href',cncom+"?cxd="+g_cxd);
+		$(".language_box .language_box_item a").eq(1).attr('href',escom+"?cxd="+g_cxd);
+		$(".language_box .language_box_item a").eq(2).attr('href',thcom+"?cxd="+g_cxd);
+		$(".language_box .language_box_item a").eq(3).attr('href',mycom+"?cxd="+g_cxd);
+	}
+	if(getCookie("ls")&&getCookie("ls")!=""&&getCookie("ls")!=null&&getCookie("ls")!="null")
+	{
+		var g_ls=getCookie("ls");
+	}
+	if(GetUrl("ls")!="")
+	{
+		var g_ls=GetUrl("ls");
+	}
+
+
+	$("#affid").val(g_affid);
+	$("#cpaid").val(g_cpaid);
+	$("#wid").val(g_wid);
+	$("#cxd").val(g_cxd);
+	$("#ls").val(g_ls);
+
+	$("input.affid").val(g_affid);
+	$("input.cpaid").val(g_cpaid);
+	$("input.wid").val(g_wid);
+	$("input.cxd").val(g_cxd);
+	$("input.ls").val(g_ls);
+
+});
+
